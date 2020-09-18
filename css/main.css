@@ -1,0 +1,292 @@
+* {box-sizing: border-box;}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: #fff;
+}
+
+.h-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    justify-content: space-between;
+}
+
+.h-logo {
+    width: 300px;
+}
+
+.h-btn a {
+    color: #fff;
+    background: #CC6554;
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 15px 10px;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.h-btn a:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.video {
+    height: 35vw;
+}
+
+.video iframe {
+    height: 35vw;
+}
+
+.info .row {
+    display: flex;
+}
+
+.info-left {
+    width: 50%;
+    padding: 15vw 7vw;
+    background: #CC6554;
+}
+
+.info-right {
+    width: 50%;
+    padding: 15vw 7vw;
+    background: url('../img/part1.png')no-repeat 100% 0%, url('../img/part2.png')no-repeat 100% 100%, #222C3D;
+    -webkit-background-size: 30% auto;
+    background-size: 17% auto;
+
+}
+
+.text {
+    color: #EBB891;
+    font-size: 1.9vw;
+    margin-bottom: 30px;
+}
+
+.phn a {
+    color: #EBB891;
+    font-size: 2.6vw;
+    text-decoration: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+}
+
+.modal-block {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 35px;
+    border-radius: 4px;
+    width: calc(100vw - 30px);
+    max-width: 1100px;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.modal-cls {
+    text-decoration: none;
+    font-size: 27px;
+    width: 15px;
+    height: 15px;
+    line-height: 13px;
+    position: absolute;
+    display: block;
+    right: 15px;
+    top: 15px;
+}
+
+.modal-top {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dadada;
+}
+
+.modal-top-ttl {
+    font-size: 34px;
+}
+
+.modal-quest-ttl {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.modal-answers {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.modal-col {
+    width: 100%;
+    max-width: 300px;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+}
+
+.modal-chb input {
+    display: none;
+}
+
+.modal-chb label {
+    border: 1px solid #dadada;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 7px 14px;
+    font-size: 14px;
+}
+.modal-chb input:checked + label {
+    color: #fff;
+    background: #CC6554;
+    border-color: #CC6554;
+}
+
+.modal-form {
+    max-width: 445px;
+    margin: 0 auto;
+}
+
+.modal-form-ttl {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.modal-form-input input {
+    border: 1px solid #dadada;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 7px 14px;
+    font-size: 14px;
+    cursor: text;
+}
+
+.modal-form-input input.error {
+    border-color: #f00;
+}
+
+.modal-form-input {
+    margin-bottom: 19px;
+}
+
+.modal-form-btn {
+    text-align: center;
+}
+
+.modal-form-btn button {
+    color: #fff;
+    background: #CC6554;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 15px 10px;
+    border: 0;
+    opacity: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@media(max-width: 767px){
+    .h-row {
+        align-items: center;
+    }
+
+    .h-logo {
+        flex: 1;
+    }
+
+    .h-logo img {
+        max-width: 300px;
+    }
+
+    .h-btn a {
+        font-size: 14px;
+        width: 134px;
+    }
+
+    .h-btn {
+        padding-left: 15px;
+    }
+
+    .info-left {
+        width: 100%;
+        padding: 40px 60px;
+    }
+
+    .video iframe {
+        height: 57vw;
+    }
+
+    .video {
+        height: 57vw;
+    }
+
+    .info .row {
+        flex-wrap: wrap;
+    }
+
+    .info-right {
+        width: 100%;
+        padding: 40px 60px;
+    }
+
+    .text {
+        font-size: 16px;
+        max-width: 200px;
+        margin: 0 auto 30px;
+    }
+
+    .phn {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .modal-top-ttl {
+        font-size: 24px;
+    }
+
+    .modal-quest-ttl {
+        font-size: 20px;
+    }
+
+    .modal-form-ttl {
+        font-size: 20px;
+    }
+}
